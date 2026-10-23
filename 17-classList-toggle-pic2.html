@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kugli</title>
+    <style>
+        #message {
+            font-size: 20px;
+            
+        }
+        #tombolGanti {
+
+            background-color: green;
+            padding: 7px;
+            color: white;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+    </style>
+        
+</head>
+<body>
+    <div class="cats-container">
+    <h1>Learn DOM with Picture</h1>
+    <p>let's see how was kugli foto</p>
+    <img id="foto" src="image/michi.jpeg" alt="foto-kucing" width="200"> 
+    <br>
+    <p id="message">this was small kugli</p>
+    <button id="tombolGanti">Change Photo</button>
+
+
+    </div>
+
+
+    <script>
+        const foto = document.getElementById("foto");
+        const tombolGanti = document.getElementById("tombolGanti");
+        tombolGanti.addEventListener("click", function(){
+            if (foto.src.includes ("image/michi.jpeg")){
+                foto.src = "image/kugli.jpeg";
+                message.textContent = "this is big kugli"
+            }else {
+                foto.src = "image/michi.jpeg";
+                message.textContent = "this was small kugli";
+            }
+
+        })
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kugli</title>
+
+</head>
+<body>
+    <h1>Blejar DOM dengan gambar</h1>
+    <img id="foto" src="image/michi.jpeg" alt="foto-kucing" width="200"> 
+    <br>
+    <p id="message">this is litte kugli</p>
+    <button id="tombolGanti">Ganti Gambar</button>
+
+
+    <script>
+        const foto = document.getElementById("foto");
+        const tombolGanti = document.getElementById("tombolGanti");
+        tombolGanti.addEventListener("click", function(){
+            foto.src = "image/kugli.jpeg"
+
+        })
+        
+
+    </script>
+    
+</body>
+</html>

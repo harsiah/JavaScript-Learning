@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>belajar DOM2</title>
+</head>
+<body>
+    <h1>belajar DOM2</h1>
+    <input id="inputName" type="text" placeholder="masukan nama kamu...">
+    <button id="tombol">sapa saya</button>
+    <p id="message">sapaan akan muncul disini.</p>
+
+    <script>
+        const inputName = document.getElementById("inputName");
+        const tombol = document.getElementById("tombol");
+        const message = document.getElementById("message")
+
+        tombol.addEventListener("click", function(){
+            const name = inputName.value;
+            if (name === ""){
+                message.textContent = "nama tidak boleh kosong!";
+            } else {
+                message.textContent = "hallo, " + name + "!";
+            }
+
+        })
+    </script>
+</body>
+</html>
+
+
+
+

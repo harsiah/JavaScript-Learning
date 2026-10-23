@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM classList</title>
+    <style>
+        .teks-besar {
+            font-size: 30px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Belajar DOM JavaScript</h1>
+    <p id="message">Hello, saya sedang belajar DOM.</p>
+    <button id="tombolWarna">ubah tampilan</button>
+
+    <script>
+        const message = document.getElementById("message");
+        const tombolWarna = document.getElementById("tombolWarna");
+        tombolWarna.addEventListener("click", function(){
+            message.classList.toggle("teks-besar");
+        })
+
+
+
+   
+   </script>
+</body>
+</html>

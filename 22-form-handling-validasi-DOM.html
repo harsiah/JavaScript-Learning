@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h2>Account Registration</h2>
+
+    <form id="registrationForm">
+    <input type="text" id="username" placeholder="Username">
+    <input type="email" id="email" placeholder="Email">
+    <button type="submit">Daftar</button>
+    </form>
+
+    <p id="message"></p>
+    
+
+    <script>
+        const registrationForm = document.getElementById("registrationForm");
+        const username = document.getElementById("username");
+        const email = document.getElementById("email");
+        const message = document.getElementById("message");
+
+        registrationForm.addEventListener("submit", function(event){
+            event.preventDefault();
+
+            const usernameValue = username.value.trim();
+            const emailValue = email.value.trim();
+            if (usernameValue.length < 3){
+                message.textContent = "username minimal 3 karakter.";
+                message.style.color = "red";
+                return;
+            }
+
+            if (!emailValue.includes("@") || !emailValue.includes(".")) {
+                message.textContent = "email tidak valid.";
+                message.style.color = "red";
+                return;
+            }
+
+            message.textContent = "Registrasi berhasil!";
+            message.style.color = "green";
+
+        
+
+        });
+
+
+    </script>
+</body>
+</html>

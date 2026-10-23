@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributes DOM</title>
+</head>
+<body>
+    <button id="buyBtn" data-product="Laptop" data-price="8000000">Beli Laptop</button>
+
+
+    <script>
+        const buyBtn = document.getElementById("buyBtn");
+        console.log(buyBtn.getAttribute("id"));
+        console.log(buyBtn.getAttribute("data-product"));
+        console.log( buyBtn.getAttribute("data-price"));
+
+        console.log(buyBtn.dataset.product);
+        console.log(buyBtn.dataset.price);
+
+    </script>
+</body>
+</html>

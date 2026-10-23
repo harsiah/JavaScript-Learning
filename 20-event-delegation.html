@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event delegation</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="productList">
+    <button class="buyBtn">Beli Laptop</button>
+    <button class="buyBtn">Beli hp</button>
+    <button class="buyBtn">Beli tablet</button>
+    </div>
+
+    <script>
+        const productList = document.getElementById("productList");
+        productList.addEventListener("click", function(event){
+            if(event.target.classList.contains("buyBtn"))
+        {
+            console.log(event.target.textContent);
+        }
+        });
+
+
+
+
+        const buttons = document.querySelectorAll("buyBtn");
+
+        buttons.forEach(function(button){
+             button.addEventListener("click", function(){
+                console.log(this.textContent);
+             });
+            
+        })
+
+
+
+    </script>
+    
+
+    
+</body>
+</html>

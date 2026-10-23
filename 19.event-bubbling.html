@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .card {
+            background: lightblue;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div  id="productCard" class="card">
+        
+    <h2>Laptop Asus</h2>
+    <p>Harga : Rp.8000 000"</p>
+
+    <button id="buyBtn">Beli Sekarang</button>
+
+    </div>
+    <script>
+        const productCard = document.getElementById("productCard");
+        const buyBtn = document.getElementById("buyBtn");
+        productCard.addEventListener("click", function(){
+            console.log("kartu product dipilih");
+        });
+
+        buyBtn.addEventListener("click", function(){
+            event.stopPropagation();
+            console.log("Tombol Beli Diklik");
+        });
+
+
+
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

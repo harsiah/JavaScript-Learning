@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktik DOM Traversing-2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            padding: 40px;
+        }
+
+        .card {
+            background: white;
+            max-width: 350px;
+            padding: 20px;
+            margin: 0 auto 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px;
+        }
+
+        h2 {
+            color: #2563eb;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        img {
+            width: 300px;
+            height: 250px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+    <img id="foto" src="image/Laptop_acer.jpg" alt="Laptop Acer" >
+    <h2>laptop acer</h2>
+    <p>price: Rp 8.000.000</p>
+    <button class="changeBtn">change Product</button>
+    </div>
+
+    <div class="card">
+    <img id="foto" src="image/new_laptop.jpg" alt="Laptop new Acer" >
+    <h2>laptop new acer</h2>
+    <p>price: Rp 8.000.000</p>
+    <button class="changeBtn">change Product</button>
+    </div>
+
+    <script>
+       const allBtn = document.querySelectorAll(".changeBtn");
+       allBtn.forEach(function(tombol){
+        tombol.addEventListener("click", function(){
+            const kartu = tombol.closest(".card");
+            const judul = kartu.querySelector("h2");
+
+            judul.textContent = "product baru"
+        })
+
+       })
+
+
+    </script>
+</body>
+</html>

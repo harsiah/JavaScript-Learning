@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversing</title>
+</head>
+<body>
+    <ul id="DaftarBelanja">
+        <li id="beras">Beras</li>
+        <li id="ayam">Ayam</li>
+        <li id="ikan">Ikan</li>
+        <li id="sayur">Sayur</li>
+    </ul>
+    
+    <script>
+        const daftar = document.getElementById("DaftarBelanja");
+        const beras = document.getElementById("beras");
+        const ayam = document.getElementById("ayam");
+        const ikan = document.getElementById("ikan");
+        const sayur = document.getElementById("sayur");
+
+        console.log(daftar.children);
+        console.log(beras.parentElement);
+        console.log(beras.nextElementSibling);
+        console.log(beras.previousElementSibling);
+
+
+
+
+    </script>
+</body>
+</html>

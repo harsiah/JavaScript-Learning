@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktik DOM Traversing-2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            padding: 40px;
+        }
+
+        .card {
+            background: white;
+            max-width: 350px;
+            padding: 20px;
+            margin: auto ;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px;
+        }
+
+        h2 {
+            color: #2563eb;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        #productCard img {
+            width: 300px;
+            height: 250;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="productCard">
+    <img id="foto" src="image/Laptop_acer.jpg" alt="laptopPic" >
+    <h2 id="productName">laptop</h2>
+    <p id="price">price: Rp 8.000.000</p>
+    <button id="changeBtn">change Product</button>
+    </div>
+
+    <script>
+        const productCard = document.getElementById("productCard");
+        const changeBtn = document.getElementById("changeBtn");
+
+        changeBtn.addEventListener("click", function(){
+            const kartu = changeBtn.parentElement;
+            const gambar = kartu.children[0];
+            const judul = kartu.children[1];
+            const harga = kartu.children[2];
+
+            gambar.setAttribute("src", "image/new_laptop.jpg");
+            judul.textContent = "smartLaptop";
+            harga.textContent = "price: Rp 5.000.000"
+
+
+            console.log(kartu);
+            console.log(judul);
+        });
+
+    </script>
+</body>
+</html>

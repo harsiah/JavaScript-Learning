@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="productImage"
+    src="image/Laptop_acer.jpg"
+    alt="Laptop Acer"
+    width="200">
+
+    <button id="changeBtn">Change Picture</button>
+
+    <script>
+        const productImage = document.getElementById("productImage");
+        const changeBtn = document.getElementById("changeBtn");
+
+        changeBtn.addEventListener("click", function(){
+            productImage.setAttribute("src", "image/michi.jpeg");
+            productImage.setAttribute("alt", "kucing");
+
+        });
+    </script>
+</body>
+</html>

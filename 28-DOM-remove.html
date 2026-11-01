@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Mini Project</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f1f5f9;
+        padding: 30px;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .card {
+        background: white;
+        padding: 20px;
+        margin-bottom: 15px;
+
+        border-radius: 12px;
+        box-shadow: 0 4px 10px blue;
+      }
+
+      h1 {
+        color: navy;
+      }
+      h2 {
+        color: blue;
+      }
+
+      button {
+        background: rgba(55, 0, 255, 0.789);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Daftar Product</h1>
+
+      <div id="ProductList">
+        <div class="card">
+          <h2>Laptop Acer</h2>
+          <p>Harga: Rp 8.000.000</p>
+          <button class="deleteBtn">Deleted Product</button>
+        </div>
+
+        <div class="card">
+          <h2>Mouse Logitech</h2>
+          <p>Harga : Rp 250.000</p>
+          <button class="deleteBtn">Deleted Product</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const allBtn = document.querySelectorAll(".deleteBtn");
+      allBtn.forEach(function (tombol) {
+        tombol.addEventListener("click", function () {
+          const kartu = tombol.closest(".card");
+          kartu.remove();
+        });
+      });
+    </script>
+  </body>
+</html>

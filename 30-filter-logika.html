@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const products = [
+            {nama: "laptop", price: 5000000},
+            {nama: "mouse", price: 250000},
+            {nama: "keyboard", price: 500000},
+        ];
+
+        const result = products.filter(product => {
+            return product.price > 300000
+        });
+
+        console.log(result);
+    </script>
+</body>
+</html>

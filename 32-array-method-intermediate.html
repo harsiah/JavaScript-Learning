@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array method lanjutan</title>
+</head>
+<body>
+    <script>
+
+        //array method includes//
+        const fruits = ["apple", "anggur", "nenas"];
+        console.log(fruits.includes("nenas"));
+
+        const numbers = [10, 30, 50, 60];
+        console.log(numbers.includes(40));
+
+        //array method indexOf //
+        const products = ["laptop", "mouse", "monitor"]
+        console.log(products.lastIndexOf("mouse"));
+
+        //array method pop (menghapus elemen terakhir array) //
+        const students = ["ani", "lia", "dila"];
+        students.pop();
+        console.log(students);
+
+        //pop mengembalikan data yang di hapus//
+        const numbers1 = [100, 200, 300];
+        
+        const deletedNumbers = numbers1.pop();
+        console.log(deletedNumbers);
+
+        //array method shift()//
+        const students1 = ["isha", "raya"];
+        students1.shift();
+        console.log(students1);
+
+        //shift juga mengembalikan elemen yang dihapus
+        const numbers2 = [20, 40, 35, 65];
+        const deletedNumbers2 = numbers2.shift();
+
+        console.log(deletedNumbers2);
+        console.log(numbers2);
+
+        //array method unshift //
+        const products1 = ["iphone", "laptop", "mouse"];
+        const resultProducts1 = products1.unshift("headset");
+
+        console.log(resultProducts1);
+        console.log(products1);
+
+        //array method reverse //
+        const products2 = ["piring", "sendok", "panci"];
+        products2.reverse();
+        console.log(products2);
+
+        //gabungan slice dan reverse//
+        const numbers3 = [2, 3, 4, 5]
+        const reverseNumbers = numbers3.slice().reverse();
+        console.log(reverseNumbers);
+        console.log(numbers3);
+
+        //arraay method toReversed //
+        const products3 = ["sendok", "panci", "piring"];
+        const resultProducts3 = products3.toReversed();
+        console.log(resultProducts3);
+        console.log(products3);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

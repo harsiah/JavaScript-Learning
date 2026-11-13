@@ -253,19 +253,46 @@
       console.log(sortedProducts);
 
       //array method slice//
-      const fruits1 = ["apple", "banana", "orange", "grape", "kiwi"];
-      const result5 = fruits1.slice(1, 4);
-      console.log(result5);
+      const fruits5 = ["apple", "banana", "orange", "grape", "kiwi"];
+      const resultfruit = fruits5.slice(1, 4);
+      console.log(resultfruit);
+
+      //array method slice//
+      const electronics = ["keyboard", "laptop", "mouse", "monitor", "headset"]
+      const resultElectronic = electronics.slice(2,4);
+      console.log(resultElectronic);
+
 
       //array method splice//
       const fruits2 = ["apple", "banana", "orange", "grape", "kiwi"];
       fruits2.splice(1, 2);
       console.log(fruits2);
 
-      //array method splice mengganti data////
+      //array method splice menambah  data////
+      const fruits3 = ["Apple", "Banana", "grape"];
+      fruits3.splice(2,0, "orange");
+      console.log(fruits3);
 
+      //array method splice untuk mengganti data//
+      const fruits4 = ["apple", "banana", "manggo"];
+      fruits4.splice(1,1, "orange");
+      console.log(fruits4);
 
+      //array method concat dan join //
+      const freshFruits1 = ["apple", "anggur"];
+      const freshFruits2 = ["banana", "mango"];
+      const allfruits = freshFruits1.concat(freshFruits2);
+      console.log(allfruits);
 
+      const phone1 = ["iphone", "oppo"];
+      const phone2 = ["advan", "reno5"];
+      const phone3 = ["redmi", "huawei"];
+      const allphones = phone1.concat(phone2,phone3);
+      console.log(allphones);
+
+      const animals = ["anjing", "kucing", "sapi"];
+      const animalReslut = animals.join();
+      console.log(animalReslut);
 
 
 
